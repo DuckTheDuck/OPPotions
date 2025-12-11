@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 40,
+  "experience": 0.15,
+  "group": "ash",
+  "ingredient": {
+    "item": "oppotionsmod:coal_powder"
+  },
+  "result": {
+    "id": "oppotionsmod:ash"
+  }
+}

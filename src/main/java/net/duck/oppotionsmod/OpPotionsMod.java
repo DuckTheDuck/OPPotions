@@ -1,6 +1,9 @@
 package net.duck.oppotionsmod;
 
 import com.mojang.logging.LogUtils;
+import net.duck.oppotionsmod.item.ModCreativeModeTabs;
+import net.duck.oppotionsmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,6 +33,9 @@ public class OpPotionsMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -43,6 +49,11 @@ public class OpPotionsMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ASH);
+            event.accept(ModItems.COAL_POWDER);
+        }
+
 
     }
 

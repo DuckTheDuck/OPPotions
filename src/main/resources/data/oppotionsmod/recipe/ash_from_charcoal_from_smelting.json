@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.45,
+  "group": "ash",
+  "ingredient": {
+    "item": "minecraft:charcoal"
+  },
+  "result": {
+    "id": "oppotionsmod:ash",
+    "count": 3
+  }
+}
